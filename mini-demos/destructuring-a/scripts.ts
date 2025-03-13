@@ -9,4 +9,3 @@ const jTwo = jArray[1];
 const jThree = jArray[2];
 const jFour = jArray[3];
 console.log(jOne);
-
