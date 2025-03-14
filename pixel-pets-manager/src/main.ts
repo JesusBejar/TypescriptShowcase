@@ -31,3 +31,7 @@ const allPets = [pet, { name: "Spike", hunger: 50, stats: [90, 40] }] as [Pet, .
 const [favorite, ...rest]: [Pet, ...Pet[]] = allPets;
 console.log(favorite);
 console.log(rest);
+
+// optional chaining + null coalescing, pull pet owner's name 
+const ownerName: string = pet?.owner?.name ?? "Unknown";
+console.log(`Owner name: ${ownerName}`);
