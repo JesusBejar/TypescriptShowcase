@@ -18,9 +18,6 @@ const { hunger, name }: { hunger: number; name: string | null } = pet;
 console.log(`${name ?? "Furlais"} is ${hunger}% hungry`);
 
 // array destructuring, display energy and mood of pet
-
-// spread, update pet hunger from 30 to 20
-
-// rest, make list of pets and grab info
-
-// optional chaining + null coalescing, pull pet owner's name 
+// const {props from a}: {assign to new vars} = aName
+const [energy, mood]: [number, number] = pet.stats;
+console.log(`Energy: ${energy}, Mood: ${mood}`);
