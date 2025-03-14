@@ -21,3 +21,13 @@ console.log(`${name ?? "Furlais"} is ${hunger}% hungry`);
 // const {props from a}: {assign to new vars} = aName
 const [energy, mood]: [number, number] = pet.stats;
 console.log(`Energy: ${energy}, Mood: ${mood}`);
+// spread, update pet hunger from 30 to 20
+const updatedPet: Pet = { ...pet, hunger: 20 };
+console.log(updatedPet)
+
+// rest, make list of pets and grab info
+const allPets = [pet, { name: "Spike", hunger: 50, stats: [90, 40] }] as [Pet, ...Pet[]];
+// tuple type means that at least one value has to be exist within array
+const [favorite, ...rest]: [Pet, ...Pet[]] = allPets;
+console.log(favorite);
+console.log(rest);
